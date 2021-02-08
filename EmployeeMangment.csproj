@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20201214135845_photoPathColumn.cs" />
+    <Compile Remove="Migrations\20201214135845_photoPathColumn.Designer.cs" />
+    <Compile Remove="Migrations\20201214140915_photoPathColumn.cs" />
+    <Compile Remove="Migrations\20201214140915_photoPathColumn.Designer.cs" />
+    <Compile Remove="Migrations\20210120091727_extend_identityUser.cs" />
+    <Compile Remove="Migrations\20210120091727_extend_identityUser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
